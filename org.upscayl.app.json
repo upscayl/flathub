@@ -32,7 +32,7 @@
         {
           "type": "file",
           "only-arches": ["x86_64"],
-          "url": "https://github.com/JanDeDinoMan/upscayl/releases/download/v1.5.5/upscayl-1.5.5.zip",
+          "url": "https://github.com/upscayl/upscayl/releases/download/v1.5.5/upscayl-1.5.5.zip",
           "sha256": "0e57b3cbb96299fac6beea185ffdf2f105d3258ac6081bd1f3c408912541dacc"
         },
         {
@@ -41,7 +41,7 @@
         },
         {
           "type": "file",
-          "path": "../main/build/icon.png"
+          "path": "icon.png"
         },
         {
           "type": "script",
