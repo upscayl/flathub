@@ -26,5 +26,10 @@
         <keyword>ai</keyword>
         <keyword>ersgan</keyword>
     </keywords>
+    <screenshots>
+        <screenshot>
+            <video container="mp4" codec="h.264" width="1218" height="170">https://user-images.githubusercontent.com/25067102/191083105-cca0dc96-69d5-472b-baff-cb89f1603488.mp4</video>
+        </screenshot>
+    </screenshots>
     <translation type="gettext">Upscayl</translation>
 </component>
