@@ -1,0 +1,49 @@
+id: io.github.upscayl.upscayl
+sdk: org.freedesktop.Sdk
+runtime: org.freedesktop.Platform
+runtime-version: "22.08"
+base: org.electronjs.Electron2.BaseApp
+base-version: "22.08"
+command: upscayl.sh
+separate-locales: false
+
+finish-args:
+  - --device=dri
+  - --filesystem=home
+  - --share=network
+  - --socket=x11
+  - --share=ipc
+  - --socket=pulseaudio
+
+modules:
+  - name: upscayl
+    buildsystem: simple
+    sources:
+      - type: file
+        only-arches:
+          - x86_64
+        url: >-
+          https://github.com/upscayl/upscayl/releases/download/v2.0.1/upscayl-2.0.1-linux.zip
+        sha256: 96883ae1bb9a3a5c0972ab7e402c5132e40c4fe0ffaeec8753524df16b03de51
+        dest-filename: upscayl.zip
+      - type: file
+        path: io.github.upscayl.upscayl.metainfo.xml
+      - type: file
+        path: io.github.upscayl.upscayl.desktop
+      - type: file
+        path: icon.png
+      - type: file
+        path: upscayl.sh
+    build-commands:
+      - install -d /app/upscayl
+      - unzip upscayl -d /app/upscayl
+      - install -Dm755 upscayl.sh /app/bin/
+      - >-
+        install -Dm644 icon.png
+        /app/share/icons/hicolor/512x512/apps/io.github.upscayl.upscayl.png
+      - >-
+        install -Dm644 io.github.upscayl.upscayl.metainfo.xml
+        /app/share/metainfo/io.github.upscayl.upscayl.metainfo.xml
+      - >-
+        install -Dm644 io.github.upscayl.upscayl.desktop
+        /app/share/applications/io.github.upscayl.upscayl.desktop

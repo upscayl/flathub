@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=upscayl.sh %U
+Icon=io.github.upscayl.upscayl
+Comment=Upscale Images
+Name=Upscayl
+StartupNotify=false
+Categories=ImageProcessing;RasterGraphics;Graphics;
+Type=Application
