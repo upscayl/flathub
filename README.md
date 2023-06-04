@@ -1,3 +1,5 @@
+# DON'T EDIT THIS REPO! THE REAL REPO IS HERE: https://github.com/flathub/org.upscayl.Upscayl
+
 # Flathub
 
 Flathub is the central place for building and hosting Flatpak builds.
